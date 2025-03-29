@@ -1,0 +1,76 @@
+{
+  "steps": [
+    {
+      "name": "Clona ComfyUI",
+      "command": "git clone https://github.com/comfyanonymous/ComfyUI"
+    },
+    {
+      "name": "Crea ambiente virtuale (venv esterno)",
+      "command": "python -m venv venv"
+    },
+    {
+      "name": "Attiva venv e aggiorna pip",
+      "command": "call venv\\Scripts\\activate.bat && python -m pip install --upgrade pip"
+    },
+    {
+      "name": "Installa PyTorch con CUDA 12.4",
+      "command": "call venv\\Scripts\\activate.bat && pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124"
+    },
+    {
+      "name": "Installa requirements.txt di ComfyUI",
+      "command": "call venv\\Scripts\\activate.bat && pip install -r ComfyUI\\requirements.txt"
+    },
+    {
+      "name": "Installa onnxruntime-gpu",
+      "command": "call venv\\Scripts\\activate.bat && pip install onnxruntime-gpu"
+    },
+    {
+      "name": "Installa wheel, setuptools, packaging, ninja",
+      "command": "call venv\\Scripts\\activate.bat && pip install wheel setuptools packaging ninja"
+    },
+    {
+      "name": "Installa accelerate, diffusers, transformers",
+      "command": "call venv\\Scripts\\activate.bat && pip install \"accelerate >= 1.1.1\" \"diffusers >= 0.31.0\" \"transformers >= 4.39.3\""
+    },
+    {
+      "name": "Aggiorna ensurepip e setuptools",
+      "command": "call venv\\Scripts\\activate.bat && python -m ensurepip --upgrade && python -m pip install --upgrade setuptools"
+    },
+    {
+      "name": "Installa PyTorch 2.6.0 con CUDA 12.4",
+      "command": "call venv\\Scripts\\activate.bat && pip install torch==2.6.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124"
+    },
+    {
+      "name": "Installa Triton 3.2.0 per Python 3.12",
+      "command": "call venv\\Scripts\\activate.bat && pip install https://github.com/woct0rdho/triton-windows/releases/download/v3.2.0-windows.post10/triton-3.2.0-cp312-cp312-win_amd64.whl"
+    },
+    {
+      "name": "Elimina cache Triton",
+      "command": "rmdir /s /q %USERPROFILE%\\.triton\\cache && mkdir %USERPROFILE%\\.triton\\cache && rmdir /s /q %TEMP%\\torchinductor_%USERNAME%\\triton && mkdir %TEMP%\\torchinductor_%USERNAME%\\triton"
+    },
+    {
+      "name": "Clona SageAttention",
+      "command": "git clone https://github.com/thu-ml/SageAttention SageAttention"
+    },
+    {
+      "name": "Installa SageAttention",
+      "command": "call venv\\Scripts\\activate.bat && chcp 65001 && cd SageAttention && python setup.py install && cd .. && rmdir /s /q SageAttention"
+    },
+    {
+      "name": "Crea file Run_Comfyui.bat",
+      "command": "echo @echo off > Run_Comfyui.bat && echo cd ComfyUI >> Run_Comfyui.bat && echo call ..\\venv\\Scripts\\activate.bat >> Run_Comfyui.bat && echo echo Venv Activated >> Run_Comfyui.bat && echo ..\\venv\\Scripts\\python.exe -s main.py --fast --windows-standalone-build --use-pytorch-cross-attention >> Run_Comfyui.bat && echo pause >> Run_Comfyui.bat"
+    },
+    {
+      "name": "Crea file Activate_Venv.bat",
+      "command": "echo @echo off > Activate_Venv.bat && echo cd venv >> Activate_Venv.bat && echo call .\\Scripts\\activate.bat >> Activate_Venv.bat && echo echo Venv Activated >> Activate_Venv.bat && echo cmd.exe /k >> Activate_Venv.bat"
+    },
+    {
+      "name": "Crea file Update_Comfy.bat",
+      "command": "echo @echo off > Update_Comfy.bat && echo cd ComfyUI >> Update_Comfy.bat && echo git pull >> Update_Comfy.bat && echo pause >> Update_Comfy.bat"
+    },
+    {
+      "name": "Clona ComfyUI Manager e Crystools",
+      "command": "git clone https://github.com/ltdrdata/ComfyUI-Manager ComfyUI\\custom_nodes\\ComfyUI-Manager && git clone https://github.com/crystian/ComfyUI-Crystools ComfyUI\\custom_nodes\\ComfyUI-Crystools"
+    }
+  ]
+}
