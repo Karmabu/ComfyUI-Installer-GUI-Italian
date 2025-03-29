@@ -80,6 +80,108 @@ Questa GUI consente di installare **ComfyUI** in due modalità differenti:
 
 ---![italiano](https://github.com/user-attachments/assets/210395f9-1b94-4b37-b9fa-f46922695bed)
 
+# Guida per Principianti - Installazione di ComfyUI Installer GUI
+
+Benvenuto! Questa guida ti accompagnerà passo passo nell'installazione di tutti i prerequisiti necessari per eseguire **ComfyUI Installer GUI**, sia in modalità Standard che Pro.
+
+---
+
+## ✅ Cosa Devi Installare
+
+| Requisito                        | Versione | Modalità | Descrizione |
+|----------------------------------|----------|-----------|-------------|
+| Python                           | 3.12.9   | Tutte     | Necessario per eseguire ComfyUI e creare ambienti virtuali |
+| Git                              | Ultima   | Tutte     | Necessario per clonare il repository ComfyUI da GitHub |
+| CUDA Toolkit                     | 12.4     | Tutte     | Necessario per sfruttare la GPU (solo per schede NVIDIA) |
+| Visual Studio Community 2022     | Ultima   | Solo Pro  | Necessario per compilare SageAttention e Triton |
+
+---
+
+## 1. Installa Python 3.12.9
+
+- Visita: https://www.python.org/downloads/release/python-3129/
+- Scarica il **Windows Installer (64-bit)**
+- Avvia l'installer:
+  - ✅ Spunta "Add Python to PATH"
+  - ✅ Clicca su "Install Now"
+
+### Verifica l'installazione:
+Apri il **Prompt dei Comandi** e digita:
+```
+python --version
+```
+Dovresti vedere:
+```
+Python 3.12.9
+```
+
+---
+
+## 2. Installa Git
+
+- Vai su: https://git-scm.com/download/win
+- Scarica e installa Git per Windows
+- Lascia tutte le opzioni predefinite durante l'installazione
+
+### Verifica l'installazione:
+Apri il **Prompt dei Comandi** e digita:
+```
+git --version
+```
+Dovresti vedere qualcosa come:
+```
+git version 2.xx.x.windows.1
+```
+
+---
+
+## 3. Installa CUDA Toolkit 12.4
+
+- Visita: https://developer.nvidia.com/cuda-downloads
+- Seleziona:
+  - Sistema Operativo: **Windows**
+  - Versione: **12.4**
+  - Architettura: **x86_64**
+  - Tipo di Installer: **Network Installer** o **Local Installer**
+- Completa l'installazione e riavvia il PC
+
+### Verifica l'installazione:
+Apri il **Prompt dei Comandi** e digita:
+```
+nvcc --version
+```
+Dovresti vedere qualcosa come:
+```
+Cuda compilation tools, release 12.4, V...
+```
+
+---
+
+## 4. Installa Visual Studio Community 2022 (solo Pro)
+
+- Visita: https://visualstudio.microsoft.com/it/vs/community/
+- Clicca su **"Scarica"**
+- Durante l'installazione:
+  - ✅ Seleziona **Sviluppo desktop con C++**
+  - ✅ (Facoltativo) Seleziona anche "Sviluppo Python"
+- Completa l'installazione e riavvia il PC
+
+### Verifica la presenza del compilatore cl.exe:
+Apri il **Prompt dei Comandi** e digita:
+```
+where cl.exe
+```
+Se è tutto corretto, vedrai un percorso come:
+```
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\<version>\bin\Hostx64\x64\cl.exe
+```
+
+---
+
+## Tutto Pronto!
+Una volta completati questi passaggi, puoi avviare la **ComfyUI Installer GUI** e procedere all'installazione in modalità **Standard** o **Pro**.
+
+Hai bisogno di aiuto? Visita il nostro [GitHub repository](https://github.com/Karmabu/ComfyUI-Installer-GUI)
 
 ## Autori & Supporto
 - Repo GitHub: `coming soon...`
