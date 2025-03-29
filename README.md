@@ -2,6 +2,8 @@
 Windows ComfyUI-Installer-GUI-Italian
 # ComfyUI Installer GUI - Standard & Pro
 
+🇬🇧 English version available here: [ComfyUI-Installer-GUI](https://github.com/Karmabu/ComfyUI-Installer-GUI)
+
 Questa GUI consente di installare **ComfyUI** in due modalità differenti:
 
 ## Modalità disponibili
