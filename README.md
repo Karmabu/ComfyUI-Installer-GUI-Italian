@@ -20,8 +20,7 @@ Questa GUI consente di installare **ComfyUI** in due modalità differenti:
     - Requirements da `requirements.txt`
     - onnxruntime-gpu, wheel, setuptools, packaging, ninja
     - accelerate, diffusers, transformers
-  - Pulizia delle cache Triton e TorchInductor
-  - Generazione di:
+    - Generazione di:
     - `Run_Comfyui.bat`
     - `Activate_Venv.bat`
     - `Update_Comfy.bat`
