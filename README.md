@@ -78,7 +78,8 @@ Questa GUI consente di installare **ComfyUI** in due modalità differenti:
 - **Personalizzabile** tramite JSON
 - Funziona **offline** (eccetto git e pip)
 
----
+---![italiano](https://github.com/user-attachments/assets/210395f9-1b94-4b37-b9fa-f46922695bed)
+
 
 ## Autori & Supporto
 - Repo GitHub: `coming soon...`
