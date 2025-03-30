@@ -80,6 +80,14 @@ Questa GUI consente di installare **ComfyUI** in due modalità differenti:
 
 ---![italiano](https://github.com/user-attachments/assets/210395f9-1b94-4b37-b9fa-f46922695bed)
 
+## 🔄 Aggiornamento Marzo 2025
+
+- 🆕 Aggiunto editor grafico completo per gli installer basati su JSON (`K3U JSON Builder`)
+- 🤖 Introdotto il controllo sintattico dei comandi tramite LLM locale (Ollama) – completamente configurabile
+- 🧩 Editor visuale con gestione degli step (aggiungi, modifica, elimina, salva)
+
+![K3U JSON](https://github.com/user-attachments/assets/31205229-be0a-4b34-950a-21f7281534f7)
+
 # Guida per Principianti - Installazione di ComfyUI Installer GUI
 
 Benvenuto! Questa guida ti accompagnerà passo passo nell'installazione di tutti i prerequisiti necessari per eseguire **ComfyUI Installer GUI**, sia in modalità Standard che Pro.
